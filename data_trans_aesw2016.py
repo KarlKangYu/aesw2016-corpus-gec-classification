@@ -9,6 +9,7 @@ def data_transformer(datain, dataout_right, dataout_wrong, dataout_absolute_righ
                     for line in f1.readlines():
                         line = line.strip()
                         label, _, sentence = line.split('\t')
+                        sentence = sentence.strip()
                         if label == '1':
                             fr.write(sentence + '\n')
                         if label == '-1':
